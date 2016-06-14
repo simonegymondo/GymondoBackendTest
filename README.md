@@ -5,7 +5,7 @@ You should not take more than 90 minutes to complete all the tasks.
 ###### Problem Statement
 You are asked to extend some of the /rest-api/api/v1/users endpoint functionalities. The application right now is completely functional but we'd like to enrich the user information with:
 
-* The subscriptions that belong a users or users;
+* The subscriptions that belong to the users;
 * The expiration date of each subscription.
 
 ###### Objectives

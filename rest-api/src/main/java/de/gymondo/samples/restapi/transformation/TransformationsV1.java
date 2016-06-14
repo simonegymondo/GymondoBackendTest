@@ -44,7 +44,7 @@ public class TransformationsV1 {
     }
 
     /*
-     * TODO: Create the transformation methods for the subscriptions,
+     * TODO: Create the transformation methods for the subscriptions.
      *
      * Don't forget to include the expiration date of the subscription in the DTO.
      */

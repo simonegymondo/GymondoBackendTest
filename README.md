@@ -8,13 +8,20 @@ You are asked to extend some of the /rest-api/api/v1/users endpoint functionalit
 * The subscriptions that belong to the users;
 * The expiration date of each subscription.
 
+You are also asked to create the foollowing endpoints:
+
+* Fetch a single user by id;
+* Fetch all the subscriptions that belong to a given user.
+
+You will find more details once you get your hands in the source code.
+
 ###### Objectives
 You are being tested for good practices, code cleanliness and performance.
 
 ###### Reflections
 
 * What's the problem with the GET /rest-api/api/v1/users endpoint? How can we solve it? Ignore the security topic.
-* Imagine that for some reason we decide that we no longer want to deliver the subscriptions with the user (this means removing the subscriptions member from the json). What would you do to accomplish that? Why is this such an important topic?
+* Imagine that for some reason we decide that we no longer want to deliver the subscriptions with the user (this means removing the "subscriptions" member from the json file). What would you do to accomplish that? Why is this such an important topic?
 
 ###### Installing and running
 

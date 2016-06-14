@@ -30,9 +30,8 @@ git checkout master
 
 mvn clean install
 
-cd rest-api
-
 # To run the application:
+cd rest-api
 mvn tomcat7:run
 
 # Open a web browser and type http://localhost:8080/rest-api/api/v1/users

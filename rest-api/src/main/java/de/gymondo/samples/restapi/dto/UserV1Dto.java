@@ -6,8 +6,6 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import de.gymondo.samples.commons.builder.FluentBuilder;
 
-import java.util.List;
-
 /**
  * Data Transfer Object for user information.
  *
@@ -21,18 +19,12 @@ public class UserV1Dto implements Dto {
     private final String name;
     private final Integer age;
     private final String gender;
-    private final List<SubscriptionV1Dto> subscriptions;
 
     public UserV1Dto(Builder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.age = builder.age;
         this.gender = builder.gender;
-        this.subscriptions = builder.subscriptions;
-    }
-
-    public List<SubscriptionV1Dto> getSubscriptions() {
-        return subscriptions;
     }
 
     public Integer getId() {
@@ -57,7 +49,7 @@ public class UserV1Dto implements Dto {
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id, name, age, gender, subscriptions);
+        return Objects.hashCode(id, name, age, gender);
     }
 
     @Override
@@ -73,7 +65,6 @@ public class UserV1Dto implements Dto {
                 && Objects.equal(this.name, other.name)
                 && Objects.equal(this.age, other.age)
                 && Objects.equal(this.gender, other.gender)
-                && Objects.equal(this.subscriptions, other.subscriptions)
                 ;
     }
 
@@ -84,7 +75,6 @@ public class UserV1Dto implements Dto {
                 .add("name", name)
                 .add("age", age)
                 .add("gender", gender)
-                .add("subscriptions", subscriptions)
                 .toString();
     }
 
@@ -94,13 +84,6 @@ public class UserV1Dto implements Dto {
         private String name;
         private Integer age;
         private String gender;
-        private List<SubscriptionV1Dto> subscriptions;
-
-        public Builder withSubscriptions(List<SubscriptionV1Dto> subscriptions) {
-            this.subscriptions = subscriptions;
-
-            return this;
-        }
 
         public Builder withName(String name) {
             this.name = name;

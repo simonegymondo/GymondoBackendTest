@@ -1,10 +1,8 @@
 package de.gymondo.samples.restapi.transformation;
 
 import com.google.common.collect.ImmutableList;
-import de.gymondo.samples.commons.entity.Subscription;
 import de.gymondo.samples.commons.entity.User;
 import de.gymondo.samples.commons.repository.SubscriptionRepository;
-import de.gymondo.samples.restapi.dto.SubscriptionV1Dto;
 import de.gymondo.samples.restapi.dto.UserV1Dto;
 
 import java.util.List;
@@ -21,13 +19,10 @@ public class TransformationsV1 {
 
     public List<UserV1Dto> user2Dto(List<User> users) {
         /*
-         * TODO: Write this method.
+         * TODO: Enrich the user information with all the subscriptions that belong to him/her.
          *
-         * Enrich the user information with all the subscriptions that belong to him/her.
-         *
-         * Hint: Think that users might be a huge list so we would like to minimize
-         * the IO impact when going to the database. You can change the signature of the method
-         * as you wish to make it work.
+         * Hint: Think that "users" might be a huge list so we would like to minimize
+         * the IO impact when going to the database.
          */
 
         return users.stream().map(x ->
@@ -48,22 +43,9 @@ public class TransformationsV1 {
         return user2Dto(ImmutableList.of(user)).get(0);
     }
 
-    public List<SubscriptionV1Dto> subscription2Dto(List<Subscription> subscriptions) {
-        return subscriptions.stream().map(this::subscription2Dto).collect(Collectors.toList());
-    }
-
-    public SubscriptionV1Dto subscription2Dto(Subscription subscription) {
-        if (subscription == null) {
-            return null;
-        }
-
-        /*
-         * TODO: Include the expiration date in the DTO.
-         */
-
-        return SubscriptionV1Dto.builder()
-                .withId(subscription.getId())
-                .withName(subscription.getName())
-                .build();
-    }
+    /*
+     * TODO: Create the transformation methods for the subscriptions,
+     *
+     * Don't forget to include the expiration date of the subscription in the DTO.
+     */
 }

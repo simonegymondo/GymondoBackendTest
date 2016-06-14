@@ -23,7 +23,7 @@ public class UserController {
 
     private TransformationsV1 transformations = new TransformationsV1();
 
-    // In a real approach this would be calling the service layer and not the
+    // NOTE: In a real approach this would be calling the service layer and not the
     // persistence one directly.
     private UserRepository userRepository = new UserRepository();
     private SubscriptionRepository subscriptionRepository = new SubscriptionRepository();

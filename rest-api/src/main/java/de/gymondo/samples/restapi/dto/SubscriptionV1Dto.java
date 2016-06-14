@@ -15,7 +15,6 @@ import de.gymondo.samples.commons.builder.FluentBuilder;
 public class SubscriptionV1Dto implements Dto {
     private final Integer id;
     private final String name;
-    // TODO: Add the expiration date here. Think about the data type.
 
     public SubscriptionV1Dto(Builder builder) {
         this.id = builder.id;

@@ -1,6 +1,6 @@
 ## Gymondo Backend Test
 
-You should not take more than 90 minutes to complete all the tasks.
+It should not take more than 90 minutes to complete all the tasks.
 
 ###### Problem Statement
 You are asked to extend some of the /rest-api/api/v1/users endpoint functionalities. The application right now is completely functional but we'd like to enrich the user information with:
@@ -8,7 +8,7 @@ You are asked to extend some of the /rest-api/api/v1/users endpoint functionalit
 * The subscriptions that belong to the users;
 * The expiration date of each subscription.
 
-You are also asked to create the foollowing endpoints:
+You are also asked to create the following endpoints:
 
 * Fetch a single user by id;
 * Fetch all the subscriptions that belong to a given user.
